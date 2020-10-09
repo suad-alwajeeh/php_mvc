@@ -1,0 +1,11 @@
+@font-face{
+  src: url('../font/f/Tajawal-Medium.ttf');
+font-family: Tajawal;
+}
+
+*{margin: 0;
+     padding: 0;
+     font-family: Tajawal;
+    }   
+
+    

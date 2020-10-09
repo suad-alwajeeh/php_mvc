@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>جواهر للتوظيف</title>
+      <link href="../../custom/font/f/Tajawal-Medium.ttf" rel="stylesheet"> 
+      <link rel="stylesheet" href="../../custom/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../../custom/css/custom/css/style.css">
+      <link rel="stylesheet" href="css/bootstrap-datetimepicker.css?v2">
+   
+       
+      </head>
+   <body>
+
+    <div class="container" style="margin:150px auto">
+       <form  class="text-right" role="form" action="?do=add"  method="POST">
+                      <div class="form-group col-md-4 col-sm-12" style="float:right;">                                                                                        <label>  الاسم الثلاثي </label>
+
+                        <input type="text" name="name" value="<?php if(isset($_POST['name'])){echo $_POST['name'];}?>" class="form-control  rounded-0 p-3"   placeholder="">   
+                      </div>
+                         <div class="form-group col-md-4 col-sm-12" style="float:right;"> 
+                             <label>   تاريخ الميلاد </label>
+
+                        <input type="date" name="birthday" value="<?php if(isset($_POST['birthday'])){echo $_POST['birthday'];}?>" class="form-control  rounded-0 p-3" placeholder=" ">   
+                      </div>
+
+                <div class="form-group">
+                    <label>
+                        Default
+                    </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control hijri-date-default" />
+                    </div>
+                </div>
+            </div>
+       </div>
+       </form>
+
+
+   <script src="../../custom/js/jquery3.4.1.js"></script>
+       <script src="../../custom/js/bootstrap.min.js"></script>
+       <script src="../../custom/js/script.js"></script>  
+       <script src="../../custom/js/bootstrap-hijri-datetimepicker.js?v2"></script>
+
+    <script type="text/javascript">
+
+
+       $(function () {
+
+            initHijrDatePicker();
+
+            initHijrDatePickerDefault();
+
+            $('.disable-date').hijriDatePicker({
+
+                minDate:"2020-01-01",
+                maxDate:"2021-01-01",
+                viewMode:"years",
+                hijri:true,
+                debug:true
+            });
+
+        });
+
+        function initHijrDatePicker() {
+
+            $(".hijri-date-input").hijriDatePicker({
+                locale: "ar-sa",
+                format: "DD-MM-YYYY",
+                hijriFormat:"iYYYY-iMM-iDD",
+                dayViewHeaderFormat: "MMMM YYYY",
+                hijriDayViewHeaderFormat: "iMMMM iYYYY",
+                showSwitcher: true,
+                allowInputToggle: true,
+                showTodayButton: false,
+                useCurrent: true,
+                isRTL: false,
+                viewMode:'months',
+                keepOpen: false,
+                hijri: false,
+                debug: true,
+                showClear: true,
+                showTodayButton: true,
+                showClose: true
+            });
+        }
+
+        function initHijrDatePickerDefault() {
+
+            $(".hijri-date-default").hijriDatePicker();
+        }
+
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>
